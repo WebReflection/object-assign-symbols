@@ -6,6 +6,32 @@ object-assign-symbols
 # What
 This is a very simple/pragmatic approach to a standard `Object.assign` method.
 
+## How
+On browser, simply includes [this file](https://github.com/WebReflection/object-assign-symbols/blob/master/build/object-assign-symbols.js) after [this one](https://github.com/WebReflection/get-own-property-symbols/blob/master/build/get-own-property-symbols.js).
+
+On nodejs or browserify:
+
+```
+npm install get-own-property-symbols --save
+npm install object-assign-symbols --save
+```
+And to be sure these are included:
+```js
+var
+  getOwnPropertySymbols = require('get-own-property-symbols'),
+  assign = require('object-assign-symbols')
+;
+
+// from now on, both
+Object.assign
+// and
+Object.getOwnPropertySymbols
+// will be available
+// as well as
+// getOwnPropertySymbols and assign methods
+```
+
+## Compatibility
 It works with every browser that is also compatible with [Object.getOwnPropertySymbols](https://github.com/WebReflection/get-own-property-symbols#get-own-property-symbols) partial polyfill,
 which aim is to bring a reasonably spec compliant `Symbol` function so that we can all happily move forward.
 
