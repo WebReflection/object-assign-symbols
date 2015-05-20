@@ -1,0 +1,3 @@
+[submodule "get-own-property-symbols"]
+	path = get-own-property-symbols
+	url = https://github.com/WebReflection/get-own-property-symbols.git

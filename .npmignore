@@ -2,6 +2,7 @@ src/*
 test/*
 template/*
 node_modules/*
+get-own-propert-symbols/*
 build/*.amd.js
 Makefile
 index.html
