@@ -10,7 +10,7 @@ It works with every browser that is also compatible with [Object.getOwnPropertyS
 which aim is to bring a reasonably spec compliant `Symbol` function so that we can all happily move forward.
 
 ## Caveats
-If you are trying to assign other objects to one to a Dictionary (e.g. an `Object.create(null)` object), all eventual `Symbol` properties might result as enumerable.
+If you are trying to assign other objects to one to a Dictionary (e.g. an `Object.create(null)` object), all eventual `Symbol` properties might show up in a `for/in` loop.
 Accordingly, please don't do that if you care about consistency.
 
 ## Compatibility
